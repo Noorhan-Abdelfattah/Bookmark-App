@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main class="container">
+      <h3 class="text-secondary pt-3 pb-3 fw-bold">Bookmark</h3>
+      <hr />
+      <header class="pt-3 book-inputs">
+        <h2 class="text-center fw-bold text-dark">
+          Bookmark your favorite sites
+        </h2>
+
+        <section class="book-custom p-4 vstack gap-4">
+          <div>
+            <label for="siteName" class="form-label text-center"
+              >Site Name</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="siteName"
+              placeholder="bookmark Name"
+            />
+            <p class="alert alert-danger d-none" id="alertName">
+              Name is required
+            </p>
+          </div>
+          <div>
+            <label for="siteUrl" class="form-label">Site Url</label>
+            <input
+              type="url"
+              class="form-control"
+              id="siteUrl"
+              placeholder="Website Url"
+            />
+            <p class="alert alert-danger d-none" id="alertUrl">
+              Url is required
+            </p>
+          </div>
+
+          <button class="btn btn-primary mt-4" id="btnAdd">Add Bookmark</button>
+          <button class="btn btn-primary mt-4 d-none" id="btnUpdate">
+            Update Bookmark
+          </button>
+        </section>
+      </header>
+
+      <div class="table-responsive book-custom p-3">
+        <table class="table table-sm mb-0 text-nowrap text-center">
+          <tbody id="tableBody"></tbody>
+        </table>
+      </div>
+    </main>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
